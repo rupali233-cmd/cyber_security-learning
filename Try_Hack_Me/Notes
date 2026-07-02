@@ -1,0 +1,98 @@
+# 1. Phishing Emails in Action
+
+## Objective
+Learn how to identify phishing emails by analyzing email content, headers, attachments, and URLs.
+
+## Topics Covered
+- Phishing
+- Email Headers
+- Defanging URLs
+- Root Domain
+- Email Attachments
+- Indicators of Compromise (IOCs)
+
+## Tools Used
+- AttackBox
+- Terminal
+- Email (.eml) files
+
+## Commands Learned
+```
+cat
+grep
+file
+strings
+```
+
+## Key Learnings
+- Always verify the sender's email address.
+- Check email headers for suspicious information.
+- Hover over links before clicking them.
+- Defang malicious URLs before sharing them.
+- Be cautious of unexpected attachments.
+- Identify the root domain instead of subdomains.
+
+---
+
+# 2. Intro to Networking
+
+## Objective
+Understand the basics of computer networking and common protocols.
+
+## Topics Covered
+- IP Address
+- MAC Address
+- ARP
+- TCP
+- UDP
+- HTTP
+- HTTPS
+
+## Commands Learned
+```
+ping
+arp -a
+ipconfig
+tracert
+```
+
+## Key Learnings
+- ARP maps an IP address to a MAC address.
+- TCP provides reliable communication.
+- UDP provides fast communication.
+- HTTP uses Port 80.
+- HTTPS uses Port 443.
+
+---
+
+# 3. Linux Fundamentals
+
+## Objective
+Learn basic Linux navigation and commands.
+
+## Commands Learned
+```
+pwd
+ls
+cd
+mkdir
+touch
+cp
+mv
+rm
+cat
+nano
+grep
+find
+chmod
+```
+
+# Skills Gained
+
+- Email Analysis
+- Phishing Detection
+- Networking Basics
+- Linux Basics
+- Command Line
+- Packet Communication
+- Cybersecurity Fundamentals
