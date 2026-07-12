@@ -1,0 +1,313 @@
+# 🌐 Networking Basics - IP Addressing, OSI vs TCP/IP & Security Tools
+
+---
+
+# 📌 Public IP vs Private IP
+
+An **IP Address (Internet Protocol Address)** is a unique address assigned to every device connected to a network.
+
+## 🌍 Public IP Address
+
+A Public IP Address is assigned by an Internet Service Provider (ISP) and is accessible over the Internet.
+
+### Features
+- Globally unique
+- Assigned by ISP
+- Used for Internet communication
+- Accessible from anywhere on the Internet
+- Can be Static or Dynamic
+
+### Examples
+- 8.8.8.8
+- 1.1.1.1
+- 142.250.183.14
+
+### Uses
+- Hosting websites
+- Email servers
+- Cloud servers
+- Remote access
+
+---
+
+## 🏠 Private IP Address
+
+A Private IP Address is used only inside a Local Area Network (LAN). It cannot be accessed directly from the Internet.
+
+### Private IP Ranges
+
+| Class | IP Range |
+|--------|--------------------------------|
+| A | 10.0.0.0 – 10.255.255.255 |
+| B | 172.16.0.0 – 172.31.255.255 |
+| C | 192.168.0.0 – 192.168.255.255 |
+
+### Examples
+- 192.168.1.10
+- 10.0.0.5
+- 172.16.2.30
+
+### Uses
+- Home Wi-Fi
+- Office Networks
+- Internal communication
+
+---
+
+# 🔍 Public IP vs Private IP
+
+| Feature | Public IP | Private IP |
+|----------|-----------|------------|
+| Scope | Internet | Local Network |
+| Accessible from Internet | Yes | No |
+| Assigned By | ISP | Router/DHCP |
+| Unique | Globally Unique | Can Repeat |
+| Security | Less Secure | More Secure |
+| Cost | Provided by ISP | Free |
+
+---
+
+# 🌐 OSI Model
+
+The OSI (Open Systems Interconnection) Model is a conceptual networking model consisting of **7 layers**.
+
+| Layer | Name | Function | Examples |
+|--------|------|----------|----------|
+| 7 | Application | User interaction | HTTP, HTTPS, FTP, SMTP, DNS |
+| 6 | Presentation | Encryption & Compression | SSL/TLS, JPEG |
+| 5 | Session | Session Management | NetBIOS, RPC |
+| 4 | Transport | Reliable Data Transfer | TCP, UDP |
+| 3 | Network | Routing | IP, ICMP |
+| 2 | Data Link | MAC Addressing | Ethernet, ARP |
+| 1 | Physical | Cables & Signals | Fiber, Wi-Fi, Copper |
+
+---
+
+## OSI Mnemonic
+
+**All People Seem To Need Data Processing**
+
+- Application
+- Presentation
+- Session
+- Transport
+- Network
+- Data Link
+- Physical
+
+---
+
+# 🌐 TCP/IP Model
+
+The TCP/IP Model is the practical networking model used on the Internet.
+
+| TCP/IP Layer | Corresponding OSI Layers | Protocols |
+|---------------|--------------------------|-----------|
+| Application | Application + Presentation + Session | HTTP, HTTPS, FTP, SMTP, DNS |
+| Transport | Transport | TCP, UDP |
+| Internet | Network | IP, ICMP |
+| Network Access | Data Link + Physical | Ethernet, ARP, Wi-Fi |
+
+---
+
+# 📊 OSI vs TCP/IP
+
+| OSI Model | TCP/IP Model |
+|------------|--------------|
+| 7 Layers | 4 Layers |
+| Developed by ISO | Developed by DoD |
+| Reference Model | Practical Model |
+| Mainly for Learning | Used on the Internet |
+| More Detailed | Simpler |
+
+---
+
+# 🔄 TCP vs UDP
+
+| TCP | UDP |
+|------|------|
+| Connection-Oriented | Connectionless |
+| Reliable | Faster |
+| Ordered Delivery | Unordered Delivery |
+| Error Checking | Minimal Error Checking |
+| Slower | Faster |
+| Used for HTTP, HTTPS, FTP | Used for DNS, Streaming, VoIP |
+
+---
+
+# 🌍 NAT (Network Address Translation)
+
+NAT allows multiple private devices to share one public IP address.
+
+### Advantages
+- Saves Public IP Addresses
+- Improves Security
+- Hides Internal Network
+- Enables Internet Access for Private Devices
+
+---
+
+# 📡 ICMP (Internet Control Message Protocol)
+
+ICMP is used for network diagnostics and error reporting.
+
+### Common Commands
+
+Windows
+
+```cmd
+ping google.com
+```
+
+```cmd
+tracert google.com
+```
+
+Linux
+
+```bash
+ping google.com
+```
+
+```bash
+traceroute google.com
+```
+
+---
+
+# 🖥️ Useful Networking Commands
+
+## Windows
+
+```cmd
+ipconfig
+```
+
+Displays IP configuration.
+
+```cmd
+ipconfig /all
+```
+
+Displays detailed network information.
+
+```cmd
+ping <IP>
+```
+
+Checks connectivity.
+
+```cmd
+tracert <IP>
+```
+
+Shows packet route.
+
+```cmd
+nslookup google.com
+```
+
+Looks up DNS records.
+
+---
+
+## Linux
+
+```bash
+ip addr
+```
+
+Shows network interfaces.
+
+```bash
+ifconfig
+```
+
+Displays interface information.
+
+```bash
+netstat -an
+```
+
+Shows active connections.
+
+```bash
+ss -tuln
+```
+
+Displays listening ports and services.
+
+---
+
+# 📍 IP Logger
+
+IP Logger is a tool that creates a tracking link. When someone opens the link, it records connection details.
+
+### Information Collected
+- Public IP Address
+- Country
+- City (Approximate)
+- ISP
+- Browser
+- Operating System
+- Device Type
+- Date & Time
+- Referrer (if available)
+
+### Legitimate Uses
+- Security Awareness
+- Website Analytics
+- Authorized Security Testing
+- Digital Forensics
+
+### Limitations
+- Does NOT hack devices
+- Does NOT reveal passwords
+- Location is approximate, not exact
+
+---
+
+# 🐦 Canarytokens
+
+Canarytokens are free security tokens that send an alert when someone accesses a protected or decoy resource.
+
+### Types of Canarytokens
+- URL Token
+- PDF Token
+- Microsoft Word Token
+- DNS Token
+- Email Token
+- AWS Key Token
+- QR Code Token
+- Image/Web Bug Token
+
+### Uses
+- Detect unauthorized document access
+- Monitor fake API keys
+- Detect unauthorized file access
+- Intrusion Detection
+- Insider Threat Detection
+
+### Advantages
+- Free
+- Easy to deploy
+- Real-time alerts
+- Helps detect attackers early
+
+### Limitations
+- Detects activity only after the token is triggered
+- Does not prevent attacks
+- Should be used with other security controls
+
+---
+
+# ⚖️ Ethical Use
+
+Always use IP Logger, Canarytokens, and similar monitoring tools only:
+- On systems you own.
+- With explicit authorization.
+- During approved security testing or training.
+- In compliance with privacy laws and organizational policies.
+
+---
+
