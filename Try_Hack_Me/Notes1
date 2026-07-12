@@ -1,0 +1,386 @@
+# ParrotPost (TryHackMe)
+
+## Overview
+
+ParrotPost is a beginner-level TryHackMe room that introduces email security analysis and common email components used in phishing investigations.
+
+The room focuses on understanding how email messages are structured, how to inspect headers, and how to identify potentially malicious emails.
+
+---
+
+## Learning Objectives
+
+- Understand email structure
+- Analyze email headers
+- Identify sender information
+- Recognize phishing indicators
+- Investigate attachments and links
+- Learn about SMTP email transmission
+
+---
+
+## Email Components
+
+### Header
+
+Contains routing and metadata information such as:
+
+- From
+- To
+- Subject
+- Date
+- Message-ID
+- Return-Path
+- Received headers
+
+Headers help determine where an email originated and the path it took before reaching the recipient.
+
+---
+
+### Body
+
+Contains the actual content of the email.
+
+It may include:
+
+- Plain text
+- HTML
+- Hyperlinks
+- Attachments
+
+---
+
+## Important Header Fields
+
+### From
+
+Displays the sender's email address.
+
+### Return-Path
+
+Specifies where bounced emails are sent.
+
+### Reply-To
+
+Determines where replies are directed.
+
+### Received
+
+Lists every mail server that handled the email.
+
+Useful for tracing the email's route.
+
+### Message-ID
+
+Unique identifier assigned to every email.
+
+---
+
+## Common Phishing Indicators
+
+- Suspicious sender address
+- Urgent language
+- Generic greetings
+- Unexpected attachments
+- Shortened or misleading URLs
+- Domain spoofing
+- Grammar and spelling mistakes
+
+---
+
+## Email Authentication
+
+### SPF
+
+Specifies which mail servers are allowed to send emails for a domain.
+
+### DKIM
+
+Uses digital signatures to verify email integrity.
+
+### DMARC
+
+Combines SPF and DKIM to define how unauthenticated emails should be handled.
+
+---
+
+## Skills Learned
+
+- Email header analysis
+- Identifying phishing attempts
+- Understanding email authentication
+- Basic email forensics
+
+---
+# Hydra (THC Hydra)
+
+## Overview
+
+Hydra is an open-source password auditing and login brute-force tool used to test authentication mechanisms.
+
+It supports numerous network protocols and services.
+
+> Note: Hydra should only be used on systems you own or have explicit permission to test.
+
+---
+
+## Common Supported Protocols
+
+- SSH
+- FTP
+- HTTP
+- HTTPS
+- Telnet
+- SMB
+- RDP
+- MySQL
+- PostgreSQL
+- VNC
+- POP3
+- IMAP
+- SMTP
+
+---
+
+## Basic Syntax
+
+```bash
+hydra [options] service://target
+```
+
+---
+
+## Important Options
+
+| Option | Description |
+|---------|-------------|
+| -l | Single username |
+| -L | Username list |
+| -p | Single password |
+| -P | Password list |
+| -t | Number of parallel tasks |
+| -V | Verbose output |
+| -f | Stop after first valid login |
+| -o | Save output to a file |
+
+---
+
+## Example Commands
+
+Single username with password list
+
+```bash
+hydra -l admin -P passwords.txt ssh://192.168.1.10
+```
+
+Username list and password list
+
+```bash
+hydra -L users.txt -P passwords.txt ftp://192.168.1.20
+```
+
+HTTP POST login
+
+```bash
+hydra http-post-form
+```
+
+---
+
+## Common Use Cases
+
+- Password auditing
+- Weak password detection
+- Security assessments
+- Penetration testing
+
+---
+
+## Limitations
+
+- Account lockout policies
+- Rate limiting
+- MFA authentication
+- CAPTCHA protections
+
+---
+
+## Best Practices
+
+- Obtain written authorization before testing.
+- Use strong password policies.
+- Enable account lockout.
+- Implement MFA.
+- Monitor authentication logs.
+
+---
+
+## Skills Learned
+
+- Password auditing
+- Brute-force methodology
+- Authentication testing
+- Login security assessment
+
+---
+
+## Key Takeaways
+
+- Hydra is one of the most widely used login auditing tools.
+- It supports dozens of protocols.
+- Defensive controls like MFA and account lockouts significantly reduce brute-force risk.
+
+
+# Compliance (TryHackMe)
+
+## Overview
+
+The Compliance room introduces security compliance frameworks, standards, and regulations that organizations follow to protect information and meet legal requirements.
+
+Compliance demonstrates that an organization adheres to recognized security and privacy standards.
+
+---
+
+## Why Compliance Matters
+
+- Protects sensitive information
+- Meets legal requirements
+- Reduces security risks
+- Builds customer trust
+- Avoids regulatory penalties
+
+---
+
+## Common Security Standards
+
+### ISO/IEC 27001
+
+International standard for Information Security Management Systems (ISMS).
+
+Focuses on:
+
+- Risk management
+- Security policies
+- Continuous improvement
+
+---
+
+### PCI DSS
+
+Payment Card Industry Data Security Standard.
+
+Applies to organizations that store, process, or transmit payment card information.
+
+Objectives:
+
+- Secure cardholder data
+- Protect payment systems
+
+---
+
+### GDPR
+
+General Data Protection Regulation.
+
+Protects personal data of individuals within the European Union.
+
+Core principles:
+
+- Lawfulness
+- Transparency
+- Data minimization
+- Accuracy
+- Accountability
+
+---
+
+### HIPAA
+
+Protects healthcare information in the United States.
+
+Focuses on:
+
+- Patient privacy
+- Secure storage of medical records
+
+---
+
+### SOC 2
+
+Framework for evaluating service organizations.
+
+Trust Service Criteria:
+
+- Security
+- Availability
+- Processing Integrity
+- Confidentiality
+- Privacy
+
+---
+
+## Compliance vs Security
+
+| Compliance | Security |
+|------------|----------|
+| Meeting regulations | Protecting systems from threats |
+| Follows standards | Continuous protection |
+| Periodic audits | Ongoing monitoring |
+
+Compliance does **not** automatically guarantee security.
+
+---
+
+## Risk Assessment
+
+Organizations identify:
+
+- Assets
+- Threats
+- Vulnerabilities
+- Likelihood
+- Impact
+
+Controls are then implemented to reduce risk.
+
+---
+
+## Security Controls
+
+### Administrative
+
+- Policies
+- Procedures
+- Employee training
+
+### Technical
+
+- Firewalls
+- Encryption
+- MFA
+- Antivirus
+
+### Physical
+
+- CCTV
+- Access badges
+- Locks
+- Security guards
+
+---
+
+## Skills Learned
+
+- Compliance frameworks
+- Risk management
+- Security controls
+- Regulatory awareness
+
+---
+
+## Key Takeaways
+
+- Compliance helps organizations meet regulatory requirements.
+- Security and compliance work together but are not the same.
+- Risk assessments drive security decisions.
+- Effective compliance requires continuous monitoring and improvement.
